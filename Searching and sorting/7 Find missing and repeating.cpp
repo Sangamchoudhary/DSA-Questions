@@ -1,7 +1,7 @@
 int *findTwoElement(int *arr, int n)
 {
 
-    // time - O(n) space - O(n)
+    // time - O(n ) space - O(n)
 
     int size = *max_element(arr, arr + n) + 2;
     int temp[size] = {0};
