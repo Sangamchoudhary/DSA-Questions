@@ -20,3 +20,19 @@ int majorityElement(int a[], int size)
     }
     return -1;
 }
+
+// time - O(n) space - O(max element in given array or equal to constraint )
+
+int n = *max_element(a, a + size) + 1;
+int temp[n] = {0};
+for (int i = 0; i < size; i++)
+{
+    temp[a[i]]++;
+}
+for (int i = 0; i < n; i++)
+{
+    if (temp[i] > size / 2)
+        return i;
+}
+return -1;
+}
