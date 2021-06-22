@@ -20,6 +20,7 @@ vector<int> find(int arr[], int n , int x )
     return {a1,a2};
 }
 
+
 //Binary search approach
 
 int firstOccur(int arr[],int n,int x){
