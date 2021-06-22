@@ -1,0 +1,8 @@
+Searching and sorting tips to remember while solving questions
+> use hashing
+> sorting (for brute force only)
+> find sum of all elements or sum of (square of all elements) and then think about solution
+> sometimes BIT Manipulation
+> Linear search , Binary search , Ternary search (rare cases)
+> use maths we learnt in our school time
+> Swap sort (when ques asks solve this with min. no of comparisons)
