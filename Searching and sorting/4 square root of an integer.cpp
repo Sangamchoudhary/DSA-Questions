@@ -1,3 +1,4 @@
-int countSquares(int N) {
-        return sqrt(N-1);
-    }
+int countSquares(int N)
+{
+    return sqrt(N - 1);
+}
