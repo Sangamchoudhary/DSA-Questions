@@ -5,4 +5,4 @@ vector<int> valueEqualToIndex(int arr[], int n) {
 	            ans.push_back(i+1);
 	    }
 	    return ans;
-}
+    }
