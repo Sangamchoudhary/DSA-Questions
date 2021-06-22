@@ -1,5 +1,5 @@
 
-// Brute Force
+// Noob Brute Force
 int majorityElement(int a[], int size)
 {
     if (size == 1)
@@ -21,7 +21,8 @@ int majorityElement(int a[], int size)
     return -1;
 }
 
-// time - O(n) space - O(max element in given array or equal to constraint )
+//Optimize
+//time - O(n) space - O(max element in given array or equal to constraint )
 
 int n = *max_element(a, a + size) + 1;
 int temp[n] = {0};
@@ -36,3 +37,18 @@ for (int i = 0; i < n; i++)
 }
 return -1;
 }
+
+//more optimize in terms of space
+//1.Brute force
+//time - O(n) space - O(n)
+unordered_map<int, int> mp;
+for (int i = 0; i < size; i++)
+{
+    mp[a[i]]++;
+}
+for (auto i : mp)
+{
+    if (i.second > size / 2)
+        return i.first;
+}
+return -1;
