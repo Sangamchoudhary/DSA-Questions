@@ -39,7 +39,6 @@ return -1;
 }
 
 //more optimize in terms of space
-//1.Brute force
 //time - O(n) space - O(n)
 unordered_map<int, int> mp;
 for (int i = 0; i < size; i++)
@@ -52,3 +51,33 @@ for (auto i : mp)
         return i.first;
 }
 return -1;
+
+//most optimize
+//BOYER MOORE VOTING ALGORITHM - time - O(n) and space - O(1)
+int ansIndex = 0;
+int count = 1;
+for (int i = 1; i < size; i++)
+{
+    if (a[ansIndex] == a[i])
+        count++;
+    else
+        count--;
+    if (count == 0)
+    {
+        ansIndex = i;
+        count = 1;
+    }
+}
+if (count > 1)
+{
+    count = 0;
+    for (int i = 0; i < size; i++)
+    {
+        if (a[ansIndex] == a[i])
+            count++;
+    }
+    if (count > size / 2)
+        return a[ansIndex];
+    else
+        return -1;
+}
