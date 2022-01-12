@@ -1,7 +1,6 @@
 Searching and sorting tips to remember while solving questions
 
 -> use hashing
-
 -> sorting 
 
 -> find sum of all elements or sum of (square of all elements) and then think about solution
