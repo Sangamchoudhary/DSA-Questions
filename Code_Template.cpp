@@ -15,23 +15,7 @@ typedef pair<long long,long long> pii;
 #define ppb pop_back
 
 void solve(){
-    int n,k,mex; 
-    cin>>n>>k>>mex;
-    string ans;
-
-    if(mex > k){
-        cout<<"-1"<<endl<<endl;
-        return;
-    }
-
-    int count = 0;
-    for(int i=0;i<n;i++){
-        if(count == mex){
-            count = 0;
-        }
-        ans.push_back(count + '0');
-        count++;
-    }
+    int n; cin>>n;
 
     print(ans);
     
